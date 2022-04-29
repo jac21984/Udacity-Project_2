@@ -1,5 +1,6 @@
+
 <!-- Add banner here -->
-![Banner](https://github.com/navendu-pottekkat/awesome-readme/blob/master/header.png)
+![Banner](https://i.giphy.com/media/gd09Y2Ptu7gsiPVUrv/giphy.webp)
 
 # Project Title
 
@@ -59,7 +60,7 @@ After you have written about your project, it is a good idea to have a demo/prev
 
 Here is a random GIF as a placeholder.
 
-![Random GIF](https://raw.githubusercontent.com/jac21984/Udacity-Project_2/main/preview.gif?token=GHSAT0AAAAAABTXUVUYV4FZEIHGUBTRQHT6YTA7S6A)
+![Random GIF](https://raw.githubusercontent.com/jac21984/Udacity-Project_2/d5cb71f2db2aa87d3e1d2e47e95c22a9ceaaa054/preview.gif?token=GHSAT0AAAAAABUB4FEK4W3RZSNUSSJS2OEQYTLSGAA)
 
 # Table of contents
 
