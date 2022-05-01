@@ -10,7 +10,7 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/jac21984/Udacity-Project_2)
 ![GitHub issues](https://img.shields.io/github/issues-raw/jac21984/Udacity-Project_2)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/jac21984/Udacity-Project_2)
-![GitHub](https://img.shields.io/github/license/jac21984/Udacity Project_2/blob/main/LICENSE)
+![GitHub liscence](https://img.shields.io/github/license/jac21984/Udacity-Project_2)
 
 <!-- Describe your project in brief -->
 
