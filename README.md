@@ -1,7 +1,7 @@
 <!-- Add banner here -->
 ![Banner](https://i.giphy.com/media/gd09Y2Ptu7gsiPVUrv/giphy.webp)
 
-# Udacity - Javascript Project 2
+# Udacity-Javascript-Project-2
 
 <!-- Add buttons here -->
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/jac21984/Udacity-Project_2?include_prereleases)
@@ -25,7 +25,7 @@ Javascript Project for Udacity. Modified a webpage template unsing javascript. T
 
 Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README. -->
 
-- [Project Title](#Udacity - Javascript Project 2)
+- [Project Title](#Udacity-Javascript-Project-2)
 - [Demo-Preview](#demo-preview)
 - [Table of contents](#table-of-contents)
 - [Installation](#installation)
