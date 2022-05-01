@@ -78,6 +78,6 @@ Project worked on in correlation with  Udacity.
 
 This was terrible.
 
-<!-- Add the footer here -->
+<!-- Add the footer here. -->
 
 ![Footer](https://thumbs.gfycat.com/GenerousImprobableHalicore-size_restricted.gif)
