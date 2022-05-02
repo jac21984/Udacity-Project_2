@@ -123,7 +123,7 @@ function activeSection() {
 		let btnTest = document.getElementById('btn ' + i);
 		
 		//tests if section on viewport and set active if true
-		if (pageTop >= (sectionTop[i]-300) && pageTop <= (sectionBottom[i]-300)) {
+		if (pageTop >= sectionTop[i] && pageTop <= (sectionBottom[i]-1)) {
 			sectionList[i].parentElement.className = "active";
 			btnTest.className = 'active';
 		} else {
