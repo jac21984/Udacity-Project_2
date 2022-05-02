@@ -18,6 +18,10 @@ body {
     color: #fff;
 }
 
+body, html {
+	scroll-snap-type: y proximity;
+}
+
 
 /* Typeography General*/
 h1 {
@@ -58,6 +62,7 @@ main {
 section {
     position: relative;
     min-height: 80vh;
+	scroll-snap-align: start;
 }
 
 
