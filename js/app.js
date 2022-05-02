@@ -101,8 +101,9 @@
 // Scroll to section on link click
 
 function btnClicked(clicked_id){
-	var btnIndex = parseInt(clicked_id.replace('btn ',''));
-	var scrollIndex = sectionTop[btnIndex] + (btnIndex * 55);
+	let btnIndex = parseInt(clicked_id.replace('btn ',''));
+	//let scrollIndex = sectionTop[btnIndex] + (btnIndex * 55);
+	let scrollIndex = sectionTop[btnIndex];
 	
 	window.scrollTo({
 		top: scrollIndex,
