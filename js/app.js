@@ -28,6 +28,8 @@
 	let sectionTop = [];
 	let sectionBottom = [];
 	let sectionHeight = [];
+	
+	
 /**
  * End Global Variables
  * Start Helper Functions
@@ -69,12 +71,14 @@
 		
 		navListMenu.appendChild(menuDiv);
 	}
-
+	
 /**
  * End Helper Functions
  * Begin Main Functions
  * 
 */
+
+
 
 // build the nav
 
@@ -95,6 +99,7 @@
 
 	function checkDOMloaded(){
 		document.addEventListener('DOMContentLoaded', getSectionListNames());
+		document.addEventListener('DOMContentLoaded', scrollbtnsetup());
 		window.onscroll = function() {activeSection()};
 	}
 
@@ -131,6 +136,41 @@ function activeSection() {
 			btnTest.className = 'inactive';
 		}
 	}
+}
+
+// back to top button items
+// We select the element we want to target
+function scrollbtnsetup(){
+	let target = document.getElementById("target");
+	let scrollToTopBtn = document.querySelector(".scrollToTopBtn")
+
+	// Next we want to create a function that will be called when that element is intersected
+	function callback(entries, observer) {
+	  // The callback will return an array of entries, even if you are only observing a single item
+	  entries.forEach(entry => {
+		if (!entry.isIntersecting) {
+		  // Show button
+		  scrollToTopBtn.classList.add("showBtn")
+		} else {
+		  // Hide button
+		  scrollToTopBtn.classList.remove("showBtn")
+		}
+	  });
+	}
+
+	function scrollToTop() {
+	  window.scrollTo({
+		top: 0,
+		behavior: "smooth"
+	  })
+	}
+	scrollToTopBtn.addEventListener("click", scrollToTop);
+		
+	// Next we instantiate the observer with the function we created above. This takes an optional configuration
+	// object that we will use in the other examples.
+	let observer = new IntersectionObserver(callback);
+	// Finally start observing the target element
+	observer.observe(target);
 }
 
 

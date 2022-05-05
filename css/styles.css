@@ -19,7 +19,8 @@ body {
 }
 
 body, html {
-	scroll-snap-type: y proximity;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
 }
 
 
@@ -52,6 +53,8 @@ p {
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 10vh;
+	scroll-snap-align: start;
+	scroll-margin: 100px;
 }
 
 .main-hero {
@@ -65,6 +68,38 @@ section {
 	scroll-snap-align: start;
 }
 
+.scrollToTopBtn {
+	height: 40px;
+	width: auto;
+  
+  /* place it at the bottom right corner */
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  /* keep it at the top of everything else */
+  z-index: 100;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all .5s ease
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.showBtn {
+	  opacity: .50;
+	  transform: translateY(0)
+	}
+}
+.showbtn:hover {
+	opacity: 1;
+}
 
 /* ---- Module Rules ---- */
 
