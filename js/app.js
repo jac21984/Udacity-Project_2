@@ -4,16 +4,18 @@
 	let sectionTop = [];
 	let sectionBottom = [];
 	let sectionHeight = [];
+	let isMobile = 'False';
 
 function checkDOMloaded(){
+		document.addEventListener('DOMContentLoaded', checkMobile());
 		document.addEventListener('DOMContentLoaded', setmenu());
 		document.addEventListener('DOMContentLoaded', getSectionListNames());
 		document.addEventListener('DOMContentLoaded', scrollbtnsetup());
 		window.onscroll = function() {activeSection()};
 	}
 function setmenu(){
-	var toggle = document.querySelector('#toggle');
-	var menu = document.querySelector('#menu');
+	let toggle = document.querySelector('#toggle');
+	let menu = document.querySelector('#menu');
 
 	toggle.addEventListener('click', function(){
 	  if (menu.classList.contains('is-active')) {
@@ -27,7 +29,7 @@ function setmenu(){
 }
 
 //gets list of section titles
-	function getSectionListNames(){
+	function getSectionListNames(){	
 		sectionList = document.querySelectorAll('.landing__container');
 		for (let i = 0; i< sectionList.length; i++){
 			sectionNames[i] = sectionList[i].children[0].innerText;
@@ -37,6 +39,7 @@ function setmenu(){
 		}
 		
 		populateMenu();
+		
 	}
 	
 //populates menu buttons with section name
@@ -61,19 +64,52 @@ function setmenu(){
 		
 		navListMenu.appendChild(menuDiv);
 	}
+	
+//check if mobile
+function checkMobile() {     
+    isMobile = window.matchMedia("only screen and (max-width: 559px)").matches;
+	//console.log(isMobile)
+ }
 
 // Scroll to section on link click
 
 function btnClicked(clicked_id){
 	let btnIndex = parseInt(clicked_id.replace('btn ',''));
-	//let scrollIndex = sectionTop[btnIndex] + (btnIndex * 55);
 	let scrollIndex = sectionTop[btnIndex];
 	
-	window.scrollTo({
-		top: scrollIndex,
-		behavior: 'smooth'
-	});
-	
+	if (isMobile) {
+        //if screen is mobile
+		console.log('is mobile')
+		if (btnIndex = sectionNames.length){
+			//scrollIndex = scrollIndex - 75;
+			window.scrollTo({
+				top: scrollIndex-75,
+				behavior: 'smooth'
+			});
+
+		} else {
+			window.scrollTo({
+				top: scrollIndex+100,
+				behavior: 'smooth'
+			});
+		}
+	} else {
+		//if screen is not mobile
+		console.log('not mobile')
+		if (btnIndex = sectionNames.length){
+			//scrollIndex = scrollIndex + 100;
+			window.scrollTo({
+				top: scrollIndex +100,
+				behavior: 'smooth'
+			});
+
+		} else {
+			window.scrollTo({
+				top: scrollIndex,
+				behavior: 'smooth'
+			});
+		}
+	}
 }
 
 // Set sections as active
@@ -95,6 +131,14 @@ function activeSection() {
 			btnTest.className = 'menubtn inactive';
 		}
 	}
+	
+/* 	console.log(sectionNames[0] + ' top is at ' + sectionTop[0]);
+	console.log(sectionNames[1] + ' top is at ' + sectionTop[1]);
+	console.log(sectionNames[2] + ' top is at ' + sectionTop[2]);
+	console.log(sectionNames[3] + ' top is at ' + sectionTop[3]);
+	
+	let scrollY = window.scrollY;
+	console.log(scrollY); */
 }
 
 
@@ -132,3 +176,4 @@ function scrollbtnsetup(){
 	// Finally start observing the target element
 	observer.observe(target);
 }
+
