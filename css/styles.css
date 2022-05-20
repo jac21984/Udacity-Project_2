@@ -225,7 +225,9 @@ ul {
 }
 
 ul.is-active {
-  display: block;
+  	display: flex;
+	flex-direction: row;
+	list-style-type:none;
 }
 
 /* Footer Styles */
